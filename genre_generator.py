@@ -1,4 +1,4 @@
-from random import randint
+import random
 
 genre_lists = [
     [
@@ -18,5 +18,5 @@ genre_lists = [
         "арэнби", "рэгги", "дабстэп", "драм эн бэйз"
     ]
 ]
-zlist = zip(range(3), map(lambda i: randint(0, len(genre_lists[i]) - 1), range(3)))
-print('{} {} {}'.format(*map(lambda i: genre_lists[i[0]][i[1]], zlist)))
+
+print('{} {} {}'.format(*map(random.choice, genre_lists)))
